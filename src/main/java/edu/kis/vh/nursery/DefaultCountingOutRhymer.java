@@ -7,11 +7,16 @@ public class DefaultCountingOutRhymer {
     private final int[] NUMBERS = new int[arraySize];
 
     private final int  EMPTY_RHYMER_INDICATOR = -1;
+
     private int totalNumbers = EMPTY_RHYMER_INDICATOR;
 
     public void countIn(int in) {
         if (!isFull())
             NUMBERS[++totalNumbers] = in;
+    }
+
+    public int getTotalNumbers() {
+        return totalNumbers;
     }
 
     public boolean callCheck() {
